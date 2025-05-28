@@ -1,0 +1,30 @@
+loc[] — Label-based indexing
+Accesses rows/columns using labels (names).
+
+Syntax: df.loc[row_label, column_label]
+
+✅ Examples:
+
+df.loc[2]                  # Row with index label 2
+df.loc[2, 'Player']        # Value at row with label 2 and column 'Player'
+df.loc[2:5, ['Team', 'Runs']]  # Rows from label 2 to 5, specific columns
+⚠️ Note: The range is inclusive of both ends (2 to 5).
+
+🔹 iloc[] — Integer-location-based indexing
+Accesses rows/columns by position (like using indexes in a list).
+
+Syntax: df.iloc[row_index, column_index]
+
+✅ Examples:
+
+df.iloc[2]                  # 3rd row (0-based index)
+df.iloc[2, 1]               # Value at 3rd row and 2nd column
+df.iloc[2:5, 0:2]           # Rows 2 to 4 (5 not included), columns 0 and 1
+⚠️ Note: The range is exclusive at the end (like in Python lists).
+
+🔁 Quick Comparison
+Feature	loc[]	iloc[]
+Indexing Type	Label-based	Integer position-based
+Includes End?	Yes (for ranges)	No (for ranges)
+Can Use Labels?	✅ Yes	❌ No
+Can Use Slices?	✅ Yes	✅ Yes
